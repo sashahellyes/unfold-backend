@@ -3,7 +3,10 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+}));
 app.use(bodyParser.json());
 
 function reduceToArcana(n) {
