@@ -77,6 +77,7 @@ function calculateMatrix(dateString) {
     "FINAL GOAL": p6
   };
 }
+app.options('/api/calculate', cors()); // Handle preflight request
 
 app.post('/api/calculate', (req, res) => {
   const { birthdate } = req.body;
